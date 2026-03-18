@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html id="mainHtml" style="visibility: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast"></div>
+    <div class="title-bar">
+        <div class="title-bar">
+            <a href="hub.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <div class="title-bar-controls">
+                <button data-action="min">&#xE921;</button>
+                <button data-action="max">&#xE922;</button>
+                <button data-action="close" id="close-btn">&#xE8BB;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-fingerprint monitor-icon"></i>
+        <h2 id="identity-display">Scanning...</h2>
+        <div class="confidence-bar">
+            <div class="confidence-fill" id="confidence-fill"></div>
+        </div>
+        <p id="status-text">Loading profiles...</p>
+    </div>
+
+    <script src="../scripts/titlebar.js"></script>
+    <script type="module" src="../scripts/monitor.js"></script>
+</body>
+</html>

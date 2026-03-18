@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html id="mainHtml" style="visibility: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast"></div>
+
+    <div class="title-bar">
+        <a href="hub.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+        <div class="title-bar-controls">
+            <button data-action="min">&#xE921;</button>
+            <button data-action="max">&#xE922;</button>
+            <button data-action="close" id="close-btn">&#xE8BB;</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Recording</h2>
+        <div class="recording-icon-wrap">
+            <i class="fas fa-microphone mic-active" id="micIcon"></i>
+            <p id="status-text">Recording your typing patterns...</p>
+        </div>
+        <div class="controls">
+            <button id="deleteBtn" class="secondary-btn side-btn control-btn"><i class="fas fa-trash"></i></button>
+            <button id="pauseBtn"  class="main-btn center-btn control-btn"><i class="fas fa-pause" id="pauseIcon"></i></button>
+            <button id="uploadBtn" class="secondary-btn side-btn control-btn"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+
+    <div id="deleteModal">
+        <div class="modal-box">
+            <h3>Clear all data?</h3>
+            <p>This will wipe your current session data.</p>
+            <div class="modal-actions">
+                <button id="confirmDelete" class="danger-btn">Delete</button>
+                <button id="cancelDelete"  class="secondary-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="uploadModal">
+        <div class="modal-box">
+            <h3>Upload session?</h3>
+            <p>Your recorded data will be added to your profile. Recording will continue after upload.</p>
+            <div class="modal-actions">
+                <button id="confirmUpload" class="main-btn">Upload</button>
+                <button id="cancelUpload"  class="secondary-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/titlebar.js"></script>
+    <script type="module" src="../scripts/record.js"></script>
+</body>
+</html>

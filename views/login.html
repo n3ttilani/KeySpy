@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html id="mainHtml" style="visibility: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar-controls">
+            <button data-action="min">&#xE921;</button>
+            <button data-action="max">&#xE922;</button>
+            <button data-action="close" id="close-btn">&#xE8BB;</button>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <div class="box">
+        <h2 id="formTitle">Sign In</h2>
+        <p>
+            <span id="instructionText">Don't have an account?</span>
+            <a id="toggleLink" href="#">Sign Up</a>
+        </p>
+        <input id="username" type="text"     placeholder="Username" autocomplete="off">
+        <input id="email"    type="email"    placeholder="Email"    autocomplete="off" class="hidden">
+        <input id="password" type="password" placeholder="Password">
+        <button id="actionBtn" class="main-btn">LOG IN</button>
+    </div>
+
+    <script src="../scripts/titlebar.js"></script>
+    <script type="module" src="../scripts/login.js"></script>
+</body>
+</html>
