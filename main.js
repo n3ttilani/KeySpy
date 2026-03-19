@@ -1,4 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
+const { autoUpdater } = require('electron-updater');
 const { uIOhook } = require('uiohook-napi');
 const { execFile } = require('child_process');
 const path = require('path');
@@ -65,6 +66,8 @@ app.whenReady().then(() => {
         clearInterval(layoutInterval);
         mainWindow = null;
     });
+
+    autoUpdater.checkForUpdatesAndNotify();
 });
 
 app.on('window-all-closed', () => {

@@ -1,15 +1,40 @@
 {
-  "name": "keyboard-recognition",
+  "name": "spykey",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "dependencies": {
+    "electron-updater": "^6.8.3",
     "uiohook-napi": "^1.5.4"
   },
   "devDependencies": {
     "electron": "^41.0.2",
+    "electron-builder": "^26.8.1",
     "electron-rebuild": "^3.2.9"
+  },
+  "build": {
+    "appId": "com.SpyKey.app",
+    "productName": "SpyKey",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "assets/**",
+      "scripts/**",
+      "views/**",
+      "main.js"
+    ],
+    "publish": {
+      "provider": "github",
+      "owner": "n3ttilani",
+      "repo": "SpyKey"
+    }
   }
 }
